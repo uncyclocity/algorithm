@@ -1,13 +1,13 @@
 const insertsort = (arr) => {
   for (let i = 1; i < arr.length; i++) {
+    let targetIdx = i;
     for (let j = i - 1; j >= 0; j--) {
-      console.log(j);
-      const target = arr[i];
+      const target = arr[targetIdx];
       const toCompare = arr[j];
       if (target < toCompare) {
-        arr[i] = toCompare;
+        arr[targetIdx] = toCompare;
         arr[j] = target;
-        i--;
+        targetIdx--;
       }
     }
   }
